@@ -92,7 +92,7 @@ Shapely==1.6.4.post2
 six==1.11.0
 sympy==1.4
 tensorboardX==1.9
-tensorflow==1.5.0
+tensorflow==1.15.2
 terminado==0.8.2
 testpath==0.4.2
 toolz==0.10.0
