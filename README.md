@@ -31,6 +31,7 @@ Please consider citing our work if you find the code helps you
 - tensorboardx 1.9
 - scikit-learn 
 - numpy
+- others (see requirements.txt)
 
 ## Code structure
 ```
@@ -82,5 +83,5 @@ CUDA_VISIBLE_DEVICES=0 python ./tools/train_R50.py
 
 ### Test  with a single GPU
 ```
-CUDA_VISIBLE_DEVICES=0 python -u ./tools/test_submission.py
+CUDA_VISIBLE_DEVICES=0 python ./tools/test_submission.py
 ```
