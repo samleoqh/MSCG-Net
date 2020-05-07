@@ -39,8 +39,8 @@ Please consider citing our work if you find the code helps you
 ├── data		# dataset loader and pre-processing code
 ├── tools		# train and test code
 ├── lib			# model, loss, utils code
-├── submission	 # output test results for submission
-└── ckpt 		 # output check point, trained weights, log files, etc
+├── submission	        # output test results for submission
+└── ckpt 		# output check point, trained weights, log files, etc
 
 ```
 
@@ -81,7 +81,12 @@ Agriculture-Vision
 CUDA_VISIBLE_DEVICES=0 python ./tools/train_R50.py
 ```
 
-### Test  with a single GPU
+### Test with a single GPU
 ```
 CUDA_VISIBLE_DEVICES=0 python ./tools/test_submission.py
 ```
+
+### Pre-trained weights download (save them to ./ckpt before run test)
+[ckpt1](https://drive.google.com/open?id=1eVvUd4TVUtEe_aUgKamUrDdSlrIGHuH3)
+[ckpt2](https://drive.google.com/open?id=1vOlS4LfHGnWIUpqTFB2a07ndlpBxFmVE)
+[ckpt3](https://drive.google.com/open?id=1nEPjnTlcrzx0FOH__MbP3e_f9PlhjMa2)
