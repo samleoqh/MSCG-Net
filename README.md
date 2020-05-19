@@ -2,48 +2,6 @@
 ## Introduce
 This repository contains MSCG-Net models (MSCG-Net-50 and MSCG-Net-101) for semantic segmentation in [Agriculture-Vision Challenge and Workshop](https://github.com/SHI-Labs/Agriculture-Vision) (CVPR 2020), and the pipeline of training and testing models, implemented in PyTorch. 
 
-Please consider citing our work if you find the code helps you
-
-[Multi-view Self-Constructing Graph Convolutional Networks with Adaptive Class Weighting Loss for Semantic Segmentation](https://arxiv.org/pdf/2004.10327)
-
-```
-@inproceedings{liu2020CVPRW,
-  title={Multi-view Self-Constructing Graph Convolutional Networks with Adaptive Class Weighting Loss for Semantic Segmentation},
-  author={Qinghui Liu and Michael Kampffmeyer and Robert Jenssen and Arnt-Børre Salberg},
-  booktitle={Proceedings of CVPRW 2020 on Agriculture-Vision},
-  year={2020}
-}
-```
-[Self-Constructing Graph Convolutional Networks for Semantic Labeling](https://arxiv.org/pdf/2003.06932)
-```
-@inproceedings{liu2020scg,
-  title={Self-Constructing Graph Convolutional Networks for Semantic Labeling},
-  author={Qinghui Liu and Michael Kampffmeyer and Robert Jenssen and Arnt-Børre Salberg},
-  booktitle={Proceedings of IGARSS 2020 - 2020 IEEE International Geoscience and Remote Sensing Symposium},
-  year={2020}
-}
-```
-
-## Environments
-- python 3.5+
-- pytorch >= 1.2.0
-- opencv 3.4+
-- tensorboardx 1.9
-- scikit-learn 
-- numpy
-- others (see requirements.txt)
-
-## Code structure
-```
-├── config		# config code
-├── data		# dataset loader and pre-processing code
-├── tools		# train and test code
-├── lib			# model, loss, utils code
-├── submission	        # output test results for submission
-└── ckpt 		# output check point, trained weights, log files, etc
-
-```
-
 ## Code structure
 
 ```
@@ -153,3 +111,26 @@ Please note that all our single model's scores are computed with just single-sca
 | MSCG-Net-101_k31 | Se_ResNext101_32x4d | 30.99      | 37.86  | 752 / 45 ms                     |
 
 Please note that all backbones used pretrained weights on **ImageNet** that can be imported and downloaded from the [link](https://github.com/Cadene/pretrained-models.pytorch#senet). And MSCG-Net-101_k31 has exactly the same architecture wit MSCG-Net-101, while it is trained with extra 1/3 validation set (4,431) instead of just using the official training images (12,901). 
+
+## Citation: 
+Please consider citing our work if you find the code helps you
+
+[Multi-view Self-Constructing Graph Convolutional Networks with Adaptive Class Weighting Loss for Semantic Segmentation](https://arxiv.org/pdf/2004.10327)
+
+```
+@inproceedings{liu2020CVPRW,
+  title={Multi-view Self-Constructing Graph Convolutional Networks with Adaptive Class Weighting Loss for Semantic Segmentation},
+  author={Qinghui Liu and Michael Kampffmeyer and Robert Jenssen and Arnt-Børre Salberg},
+  booktitle={Proceedings of CVPRW 2020 on Agriculture-Vision},
+  year={2020}
+}
+```
+[Self-Constructing Graph Convolutional Networks for Semantic Labeling](https://arxiv.org/pdf/2003.06932)
+```
+@inproceedings{liu2020scg,
+  title={Self-Constructing Graph Convolutional Networks for Semantic Labeling},
+  author={Qinghui Liu and Michael Kampffmeyer and Robert Jenssen and Arnt-Børre Salberg},
+  booktitle={Proceedings of IGARSS 2020 - 2020 IEEE International Geoscience and Remote Sensing Symposium},
+  year={2020}
+}
+```
