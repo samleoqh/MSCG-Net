@@ -99,7 +99,7 @@ CUDA_VISIBLE_DEVICES=0 python ./tools/test_submission.py
 | MSCG-Net-101_k31 (ckpt3)            | 54.1            | 79.6            | 46.2            | 54.6            | 9.1             | 74.3            | 62.4            | 52.1            |
 | Ensemble_TTA (ckpt1,2)              | 59.9            | 80.1            | 50.3            | 57.6            | 52.0            | 69.6            | 56.0            | 53.8            |
 | <u>**Ensemble_TTA (ckpt1,2,3)**</u> | 60.8 | 80.5 | <u>**51.0**</u> | 58.6 | 49.8 | <u>**72.0**</u> | 59.8 | <u>**53.8**</u> |
-| <u>**Ensemble_TTA (new_5model)**</u> | <u>**62.2**</u> | <u>**80.6**</u> | 48.7 |<u>** 62.4**</u> | <u>**58.7**</u> | 71.3| <u>**60.1**</u> | 53.4 |
+| <u>**Ensemble_TTA (new_5model)**</u> | <u>**62.2**</u> | <u>**80.6**</u> | 48.7 |<u>**62.4**</u> | <u>**58.7**</u> | 71.3| <u>**60.1**</u> | 53.4 |
 
 Please note that all our single model's scores are computed with just single-scale (512x512) and single feed-forward inference without TTA. TTA denotes test time augmentation (e.g. flip and mirror). Ensemble_TTA (ckpt1,2) denotes two models (ckpt1, and ckpt2) ensemble with TTA, and (ckpt1, 2, 3) denotes three models ensemble. 
 
