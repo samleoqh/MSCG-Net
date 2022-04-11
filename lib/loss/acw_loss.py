@@ -49,6 +49,7 @@ class ACW_loss(nn.Module):
         self.weight = (self.weight * (self.itr - 1) + sum_norm) / self.itr
         mfb = self.weight.mean() / (self.weight + self.eps)
         mfb = mfb / mfb.sum()
+        mfb = torch.clamp(mfb, min=0.001, max=1.0)
         acw = (1. + pred + one_hot_label) * mfb.unsqueeze(-1).unsqueeze(-1)
 
         if mask is not None:
