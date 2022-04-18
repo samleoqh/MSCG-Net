@@ -38,7 +38,7 @@ class SCG_block(nn.Module):
         A = torch.relu(A)
 
         Ad = torch.diagonal(A, dim1=1, dim2=2)
-        mean = torch.mean(Ad, dim=1)
+        mean = torch.mean(Ad, dim=1).clamp(min=0.001) # or mean = mean + 1.e-3 
         gama = torch.sqrt(1 + 1.0 / mean).unsqueeze(-1).unsqueeze(-1)
 
         dl_loss = gama.mean() * torch.log(Ad[Ad<1]+ 1.e-7).sum() / (A.size(0) * A.size(1) * A.size(2))
