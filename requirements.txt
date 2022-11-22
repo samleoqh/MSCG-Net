@@ -6,7 +6,7 @@ pandocfilters==1.4.2
 parso==0.4.0
 pexpect==4.7.0
 pickleshare==0.7.5
-Pillow==6.2.2
+Pillow==9.3.0
 plyfile==0.7.1
 pretrainedmodels==0.7.4
 protobuf==3.10.1
