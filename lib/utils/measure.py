@@ -19,8 +19,8 @@ def evaluate(predictions, gts, num_classes):
 
     for i in range(M):
         tp[i] = conmatrix[i, i]
-        fp[i] = np.sum(conmatrix[:, i]) - tp[i]
-        fn[i] = np.sum(conmatrix[i, :]) - tp[i]
+        fn[i] = np.sum(conmatrix[:, i]) - tp[i]
+        fp[i] = np.sum(conmatrix[i, :]) - tp[i]
 
     precision = tp / (tp + fp)  # = tp/col_sum
     recall = tp / (tp + fn)
