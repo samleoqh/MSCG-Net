@@ -165,10 +165,9 @@ def validate(net, val_set, val_loader, criterion, optimizer, epoch, new_ep):
                 inputs_all.append(None)
             else:
                 inputs_all.append(inputs.data.squeeze(0).cpu())
-
-            gts_all.append(gts.data.squeeze(0).cpu().numpy())
-            predictions = outputs.data.max(1)[1].squeeze(1).squeeze(0).cpu().numpy()
-            predictions_all.append(predictions)
+                gts_all.append(gts.data.squeeze(0).cpu().numpy())
+                predictions = outputs.data.max(1)[1].squeeze(1).squeeze(0).cpu().numpy()
+                predictions_all.append(predictions)
 
     update_ckpt(net, optimizer, epoch, new_ep, val_loss,
                 inputs_all, gts_all, predictions_all)
