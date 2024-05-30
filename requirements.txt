@@ -31,7 +31,7 @@ six==1.11.0
 sympy==1.4
 tensorboardX==1.9
 toolz==0.10.0
-torch==1.4.0
+torch==1.13.1
 torchfile==0.1.0
 torchnet==0.0.4
 torchvision==0.4.1a0+d94043a
